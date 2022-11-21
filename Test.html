@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+</head>
+<body>
+<script>
+  // function find(){
+  //   let number = +prompt('nhap n');
+  //   let count = 0;
+  //   let sum = 0;
+  //   if (number >= 2){
+  //     for (let i = 1; i<= number; i++){
+  //       for (let j =1; j <= i; j++){
+  //         if (i % j == 0){
+  //           count++;
+  //         }
+  //       }
+  //       if ( count == 2){
+  //         sum += i;
+  //       }
+  //       count =0;
+  //     }
+  //
+  //   }
+  //
+  //   alert (sum);
+  // }
+  // find();
+
+  let date = function (day, month, year){
+      this.day = day;
+      this.month = month;
+      this.year = year;
+
+      this.getDay = function (){
+          return this.day;
+      }
+      this.getMonth = function (){
+          return this.month;
+      }
+      this.getYear = function () {
+          return this.year;
+      }
+      this.setDay = function (day){
+          this.day = day;
+      }
+      this.setMonth = function (month){
+          this.month = month;
+      }
+      this.setYear = function (year){
+          this.year = year;
+      }
+  }
+  let phuong = new date (27, 8, 2000);
+  phuong.setDay(24);
+  phuong.setYear(23);
+
+
+  let day = phuong.getDay();
+  let month = phuong.getMonth();
+  let year = phuong.getYear();
+
+  alert('ngày sinh của phương là: '+ day + '.' + month + '.' + year);
+</script>
+</body>
+</html>

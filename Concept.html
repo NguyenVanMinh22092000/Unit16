@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Oriented-Object Programing</title>
+</head>
+<body>
+<script>
+  function student(id, name, age){
+      this.id = id;
+      this.name = name;
+      this.age = age;
+      this.getInfor = function (){
+          return 'id = '+ this.id + 'name = ' +this.name + 'age = '+ this.age;
+      }
+  }
+  var student1 = new student(192, 'Nguyen Van Minh', '22')
+  console.log(student1.getInfor());
+</script>
+</body>
+</html>

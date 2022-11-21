@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DrawPractice</title>
+</head>
+<body>
+<canvas id="test" width="600px" height="700px" style="border: 2px solid darkgreen;"></canvas>
+
+<script>
+    // let draw = document.getElementsByClassName('test')[0].getCon
+    let draw = document.getElementById('test').getContext('2d');
+    draw.beginPath();
+    draw.lineWidth = '18';
+    draw.strokeStyle = 'red';
+    draw.moveTo(19, 19);
+    draw.lineTo(28, 90);
+    draw.stroke();
+</script>
+</body>
+</html>

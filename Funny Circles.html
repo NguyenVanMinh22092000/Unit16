@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Funny Circles</title>
+</head>
+<body>
+<canvas class="myCanvas" width="600px" height="600px" style="border:1px solid #82CD47"></canvas>
+
+<script>
+  function circle (x, y, radius){
+    this.x = x;
+    this.y = y;
+    this.radius = radius;
+  }
+  function numberRandom(){
+      return Math.floor(Math.random()*255);
+  }
+  function colorRandom(){
+      let red = numberRandom();
+      let blue = numberRandom();
+      let green = numberRandom();
+        return "rgb(" + red + ',' + blue + ','+ green + ')';
+  }
+  function createCircle(){
+    let ctx = document.getElementsByClassName('myCanvas')[0].getContext("2d");
+    let radius = Math.floor(Math.random() * 80);
+    let color = colorRandom();
+    let x = Math.random()* window.innerWidth;
+    let y = Math.random()* window.innerHeight;
+    let c1 = new circle(500, 200, radius);
+    ctx.beginPath();
+    ctx.arc(x, y, c1.radius, 0, 2*Math.PI);
+    ctx.fillStyle = color;
+    ctx.fill();
+  }
+  function createMultipleCircle(){
+      for (let i = 0; i < 40; i++){
+          createCircle()
+      }
+  }
+ createMultipleCircle();
+
+</script>
+</body>
+</html>

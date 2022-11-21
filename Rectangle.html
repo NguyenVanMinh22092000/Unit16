@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rectangle</title>
+</head>
+<body>
+<canvas id="myPicture" width="600px" height="600px" style="border: 2px solid greenyellow;"></canvas>
+<script>
+  function drawRectangle(){
+    let draw = document.getElementById('myPicture').getContext('2d');
+    draw.beginPath();
+    draw.strokeWidth = '5';
+    draw.strokeStyle = 'red';
+      draw.moveTo(50, 50);
+      draw.lineTo(50, 250);
+      draw.lineTo(150, 250);
+      draw.lineTo(150, 50);
+      draw.lineTo(50, 50);
+      draw.font = '10px Arial';
+      draw.fillText('Int width' ,60, 60);
+      draw.fillText('Int lenght' ,60,75);
+      draw.moveTo(50, 80);
+      draw.lineTo(150,80 );
+      draw.fillText('Operation Perimeter' ,60, 90);
+      draw.fillText('Operation Area' ,60 ,100);
+      draw.stroke();
+  }
+  drawRectangle();
+
+  let Triangle = function(width, length){
+      this.width = width;
+      this.length = length;
+      this.perimeter = function() {
+         return (width + length) * 2;
+      }
+      this.area = function(){
+          return width * length;
+      }
+  }
+  let triangle1 = new Triangle(3, 4);
+  let perimeter = triangle1.perimeter();
+  let area = triangle1.area();
+  console.log(perimeter);
+  console.log(area);
+</script>
+</body>
+</html>
